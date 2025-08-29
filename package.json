@@ -1,5 +1,5 @@
 {
-  "name": "express-ts-boilerplate",
+  "name": "node-fasitfy-ts-boilerplate",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -21,6 +21,8 @@
     "typescript": "^5.9.2"
   },
   "dependencies": {
+    "@fastify/cors": "^11.1.0",
+    "@fastify/helmet": "^13.0.1",
     "dotenv": "^17.2.1",
     "fastify": "^5.5.0"
   }

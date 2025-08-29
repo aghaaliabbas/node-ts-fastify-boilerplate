@@ -1,9 +1,18 @@
 import Fastify from 'fastify';
 import { CONFIG } from './config/constants';
+import cors from '@fastify/cors';
+const helmet = require('@fastify/helmet')
 
 const SERVER = Fastify({ logger: true });
 
 const PORT = parseInt(CONFIG.port || '3000', 10);
+
+SERVER.register(cors, {
+  origin: true,
+  credentials: true
+});
+
+SERVER.register(helmet)
 
 // Basic route
 SERVER.get('/', async (request, reply) => {
